@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navneeth Patnaik</title>
+  <meta name="description"
+    content="Navneeth Patnaik is a Full-Stack Developer and Data Analyst building scalable web products and finding actionable insights." />
+  <meta property="og:title" content="Navneeth Patnaik | Portfolio" />
+  <meta property="og:description"
+    content="Navneeth Patnaik is a Full-Stack Developer and Data Analyst building scalable web products and finding actionable insights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Navneeth Patnaik | Portfolio" />
+  <meta name="twitter:description"
+    content="Navneeth Patnaik is a Full-Stack Developer and Data Analyst building scalable web products and finding actionable insights." />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="cur" id="cur"></div>
+  <div class="cur-ring" id="ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">NP<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="toggle" id="tog">
+      <div class="tog-pill" id="pill"></div>
+      <div class="tog-opt on" id="tDev">Dev</div>
+      <div class="tog-opt" id="tData">Analyst</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-line"></div>
+    <div class="hero-inner">
+      <div class="hero-status">Available for work · 2026</div>
+      <h1 class="hero-name">Navneeth<br /><span class="accent">Patnaik</span></h1>
+      <p class="hero-role" id="h-role">
+        <strong id="h-role-main">Full-Stack Developer</strong>&nbsp;·&nbsp;<span id="h-role-sub">Building scalable web
+          products end to end</span>
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-fill">View Work</a>
+        <a href="#contact" class="btn btn-line">Say Hello</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="r">
+          <div class="about-avatar">
+          <img src="profile.jpg" alt="Navneeth Patnaik" class="avatar-img" />
+        </div>
+        </div>
+        <div>
+          <div class="sec-label r">About</div>
+          <div id="ab-dev">
+            <p class="about-intro r r2">I build responsive applications —&nbsp;<em>pixel-perfect</em>, end to end.</p>
+            <p class="about-p r r3">Specializing in frontend development and component-based architecture using React
+              and modern JavaScript. I translate complex business requirements into functional, visually appealing web
+              applications.</p>
+            <p class="about-p r r3">Beyond the frontend, I build interactive tools leveraging Python and computer vision
+              libraries.</p>
+            <div class="chips r r4">
+              <span class="chip">React Web Apps</span><span class="chip">Responsive Design</span>
+              <span class="chip">Component Architecture</span><span class="chip">SCSS</span><span class="chip">Computer
+                Vision</span>
+            </div>
+          </div>
+          <div id="ab-data" style="display:none">
+            <p class="about-intro r r2">Detail-oriented CS undergrad driving&nbsp;<em>data-driven</em> decisions.</p>
+            <p class="about-p r r3">I combine statistical rigour with a solid foundation in Computer Science. My
+              hands-on experience spans across data analysis, visualization, and statistical insight generation.</p>
+            <p class="about-p r r3">Whether I'm querying relational databases or designing interactive Power BI
+              dashboards with DAX-driven KPIs, my goal is to deliver actionable business insights.</p>
+            <div class="chips r r4">
+              <span class="chip">Data Analysis</span><span class="chip">Visualisation</span>
+              <span class="chip">Insight Generation</span><span class="chip">Dashboards</span><span
+                class="chip">Statistical Methods</span>
+            </div>
+          </div>
+          <div class="stats-row r r4">
+            <div class="stat">
+              <div class="stat-n" id="s1n">3+</div>
+              <div class="stat-l" id="s1l">Years Coding</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n" id="s2n">20+</div>
+              <div class="stat-l" id="s2l">Apps Shipped</div>
+            </div>
+            <div class="stat">
+              <div class="stat-n" id="s3n">10+</div>
+              <div class="stat-l" id="s3l">Happy Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="sec-label r">Skills</div>
+      <h2 class="sec-title r" id="sk-title">Technical Stack</h2>
+      <div class="skills-grid r" id="sk-dev">
+        <div class="sk-card">
+          <div class="sk-icon">💻</div>
+          <div class="sk-cat">Programming</div>
+          <div class="sk-title">Languages</div>
+          <div class="sk-list"><span class="sk-item">Python</span><span class="sk-item">Java</span><span
+              class="sk-item">SQL</span><span class="sk-item">JavaScript</span></div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">⚛️</div>
+          <div class="sk-cat">Libraries</div>
+          <div class="sk-title">Frameworks</div>
+          <div class="sk-list"><span class="sk-item">React · Node.js</span><span class="sk-item">SCSS ·
+              Bootstrap</span><span class="sk-item">NumPy · Pandas</span><span class="sk-item">OpenCV · MediaPipe</span>
+          </div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">🗄️</div>
+          <div class="sk-cat">Storage</div>
+          <div class="sk-title">Databases</div>
+          <div class="sk-list"><span class="sk-item">MySQL</span><span class="sk-item">MongoDB</span><span
+              class="sk-item">SQL Querying</span><span class="sk-item">Relational DBs</span></div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">🔧</div>
+          <div class="sk-cat">Tools</div>
+          <div class="sk-title">Workflow & Data</div>
+          <div class="sk-list"><span class="sk-item">Git · GitHub</span><span class="sk-item">VS Code</span><span
+              class="sk-item">Power BI</span><span class="sk-item">Excel</span></div>
+        </div>
+      </div>
+      <div class="skills-grid r" id="sk-data" style="display:none">
+        <div class="sk-card">
+          <div class="sk-icon">💻</div>
+          <div class="sk-cat">Programming</div>
+          <div class="sk-title">Languages</div>
+          <div class="sk-list"><span class="sk-item">Python</span><span class="sk-item">SQL</span><span
+              class="sk-item">Java</span><span class="sk-item">JavaScript</span></div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">📊</div>
+          <div class="sk-cat">Analysis</div>
+          <div class="sk-title">Visualisation</div>
+          <div class="sk-list"><span class="sk-item">Power BI · DAX</span><span class="sk-item">Excel (Pivot,
+              VLOOKUP)</span><span class="sk-item">Matplotlib</span><span class="sk-item">Seaborn</span></div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">🐍</div>
+          <div class="sk-cat">Python</div>
+          <div class="sk-title">Libraries</div>
+          <div class="sk-list"><span class="sk-item">Pandas</span><span class="sk-item">NumPy</span><span
+              class="sk-item">OpenCV</span><span class="sk-item">Statistics</span></div>
+        </div>
+        <div class="sk-card">
+          <div class="sk-icon">🗄️</div>
+          <div class="sk-cat">Storage</div>
+          <div class="sk-title">Databases</div>
+          <div class="sk-list"><span class="sk-item">MySQL</span><span class="sk-item">MongoDB</span><span
+              class="sk-item">SQL Querying</span><span class="sk-item">Data Transformation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-label r">Projects</div>
+      <h2 class="sec-title r" id="pr-title">Selected Work</h2>
+      <div class="projects-list r" id="pr-dev">
+        <div class="proj">
+          <div class="proj-num">01</div>
+          <div class="proj-body">
+            <div class="proj-name">AI Music Interaction System</div>
+            <div class="proj-desc">Real-time, touchless music control system mapping live hand gestures to commands
+              using MediaPipe and OpenCV with sub-100ms latency.</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">OpenCV</span><span
+                class="proj-tag">MediaPipe</span></div><a href="#" class="proj-arrow">View →</a>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj-num">02</div>
+          <div class="proj-body">
+            <div class="proj-name">EduPath – Career Guidance Platform</div>
+            <div class="proj-desc">Personalized career guidance web app featuring a dynamic timeline interface and
+              centralized announcements module to help students navigate decisions.</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">Node.js</span><span
+                class="proj-tag">MySQL</span></div><a href="https://github.com/navneethptnk/EduPath" target="_blank"
+              class="proj-arrow">GitHub →</a>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj-num">03</div>
+          <div class="proj-body">
+            <div class="proj-name">QuantVista – Data Analytics Platform</div>
+            <div class="proj-desc">End-to-end analytics platform featuring Power BI dashboards, DAX-driven KPIs, and
+              Excel-based supplementary reports for cross-dimensional analysis.</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Power BI</span><span
+                class="proj-tag">DAX</span></div><a href="#" class="proj-arrow">View →</a>
+          </div>
+        </div>
+      </div>
+      <div class="projects-list r" id="pr-data" style="display:none">
+        <div class="proj">
+          <div class="proj-num">01</div>
+          <div class="proj-body">
+            <div class="proj-name">QuantVista – Data Analytics Platform</div>
+            <div class="proj-desc">Designed interactive Power BI dashboards with DAX-driven KPIs and applied data
+              preprocessing techniques (cleaning, normalization) to surface patterns, trends, and actionable insights.
+            </div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Power BI</span><span
+                class="proj-tag">DAX</span><span class="proj-tag">Excel</span></div><a href="#" class="proj-arrow">View
+              →</a>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj-num">02</div>
+          <div class="proj-body">
+            <div class="proj-name">EduPath – Career Guidance Platform</div>
+            <div class="proj-desc">Built a relational MySQL database and designed a data-driven recommendation engine
+              aggregating structured information on exams and eligibility criteria.</div>
+          </div>
+          <div class="proj-right">
+            <div class="proj-tags"><span class="proj-tag">React</span><span class="proj-tag">Node.js</span><span
+                class="proj-tag">MySQL</span></div><a href="#" class="proj-arrow">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="sec-label r">Contact</div>
+      <h2 class="sec-title r">Let's work<br />together.</h2>
+      <div class="contact-grid r">
+        <div class="contact-links">
+          <a href="mailto:navneethptnk123@gmail.com" class="clink"><span class="cl-label">Email</span><span
+              class="cl-val">navneethptnk123@gmail.com</span><span class="cl-arr">↗</span></a>
+          <a href="tel:+916304763942" class="clink"><span class="cl-label">Phone</span><span class="cl-val">+91
+              6304763942</span><span class="cl-arr">↗</span></a>
+          <a href="https://www.linkedin.com/in/navneeth-patnaik-89449a293/" target="_blank" class="clink"><span class="cl-label">LinkedIn</span><span class="cl-val">Navneeth
+              Patnaik</span><span class="cl-arr">↗</span></a>
+          <a href="https://github.com/navneethptnk" target="_blank" class="clink"><span
+              class="cl-label">GitHub</span><span class="cl-val">navneethptnk</span><span class="cl-arr">↗</span></a>
+          <a href="#" class="clink"><span class="cl-label">Location</span><span class="cl-val">Vizag, India</span><span
+              class="cl-arr"></span></a>
+        </div>
+        <form class="contact-cta" id="my-form">
+          <p class="cta-big">Send a <span>Message</span></p>
+          <p style="font-size:.85rem;color:var(--muted);line-height:1.8;margin-bottom:1rem;" id="ct-sub">Whether you
+            need a full-stack app built from the ground up, or want to take an existing product further — I'd love to
+            hear about it.</p>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Name" required class="form-input" data-fs-field>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" required class="form-input" data-fs-field>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Message" required rows="4" class="form-input" data-fs-field></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill" style="align-self:flex-start" data-fs-submit-btn>Send Message</button>
+          <div data-fs-success style="display:none; padding:1.2rem; background:var(--bg3); border-left:3px solid var(--orange); color:var(--text); font-size:0.9rem; margin-top:1rem;">
+            Thanks! Your message has been sent successfully.
+          </div>
+          <div data-fs-error style="display:none; color:#ff5c1a; font-size:0.85rem; margin-top:1rem;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Navneeth Patnaik</p>
+    <p>Full-Stack Developer & Data Analyst</p>
+  </footer>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#my-form', formId: 'mzdkgezw' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
