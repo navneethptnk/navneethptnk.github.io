@@ -56,7 +56,7 @@ function setRole(r){
     document.getElementById('s1n').textContent='3+';document.getElementById('s1l').textContent='Years Coding';
     document.getElementById('s2n').textContent='3';document.getElementById('s2l').textContent='Major Projects';
     document.getElementById('s3n').textContent='2';document.getElementById('s3l').textContent='Tech Domains';
-    document.getElementById('resume-btn').href = 'Navneeth_General_Resume_LaTeX_Style (1).pdf';
+    document.getElementById('resume-btn').href = 'Navneeth_Resume_Dev.pdf';
   } else {
     rm.textContent = 'Data Analyst';
     typeOut(rs, 'Turning raw data into actionable insight');
@@ -67,7 +67,7 @@ function setRole(r){
     document.getElementById('s1n').textContent='CS';document.getElementById('s1l').textContent='Undergraduate';
     document.getElementById('s2n').textContent='2';document.getElementById('s2l').textContent='Key Projects';
     document.getElementById('s3n').textContent='10+';document.getElementById('s3l').textContent='KPIs Delivered';
-    document.getElementById('resume-btn').href = 'Navneeth_DataAnalyst_Resume_LaTeX_Style.pdf';
+    document.getElementById('resume-btn').href = 'Navneeth_Resume_Analyst.pdf';
   }
 }
 tog.addEventListener('click',e=>{
