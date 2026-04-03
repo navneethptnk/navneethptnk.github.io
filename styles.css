@@ -168,11 +168,38 @@ nav {
   padding: 7rem 3rem 4rem;
   position: relative; overflow: hidden;
 }
+#hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: rgba(10, 10, 10, 0.80);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-bg {
+  position: absolute;
+  inset: -12%;
+  background-image: url('hero-texture.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  animation: heroFloat 28s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes heroFloat {
+  0%   { transform: translate(0%,    0%)    scale(1);    }
+  20%  { transform: translate(-1.5%, 1.2%)  scale(1.02); }
+  40%  { transform: translate(1.2%,  -1.8%) scale(1.03); }
+  60%  { transform: translate(-0.8%, 2%)    scale(1.02); }
+  80%  { transform: translate(1.8%,  0.5%)  scale(1.01); }
+  100% { transform: translate(0%,    0%)    scale(1);    }
+}
 .hero-line {
   position: absolute; top: 0; left: 3rem; bottom: 0;
   width: 1px; background: var(--border); pointer-events: none;
+  z-index: 2;
 }
-.hero-inner { position: relative; z-index: 1; max-width: 900px; }
+.hero-inner { position: relative; z-index: 2; max-width: 900px; }
+
 .hero-status {
   display: inline-flex; align-items: center; gap: .6rem;
   font-family: 'JetBrains Mono', monospace;
@@ -215,7 +242,7 @@ nav {
 .btn-line { border: 1px solid var(--border2); color: var(--muted); background: transparent; }
 .btn-line:hover { border-color: var(--muted); color: var(--text); }
 .hero-scroll {
-  position: absolute; bottom: 2.5rem; left: 3rem; z-index: 1;
+  position: absolute; bottom: 2.5rem; left: 3rem; z-index: 2;
   display: flex; align-items: center; gap: .8rem;
   opacity: 0; animation: fadeIn .6s 1.1s forwards;
 }
