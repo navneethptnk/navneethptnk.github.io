@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navneeth Patnaik — Business Analyst &amp; Integration Developer | SAP BTP, SQL</title>
+<meta name="description" content="Portfolio of Navneeth Patnaik, a Business Analyst and Integration Developer focused on SAP BTP, system integration, Python, SQL, and data-driven decision making." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============ TOKENS ============ */
+:root{
+  --bg: #F6F2E9;
+  --bg-deep: #EEE8DA;
+  --panel: #FBF9F4;
+  --ink: #26241F;
+  --ink-soft: #6E6759;
+  --ink-faint: #9A927F;
+  --sage: #6C7A56;
+  --sage-deep: #4C5A3B;
+  --sand: #C89A5B;
+  --rule: rgba(38,36,31,0.14);
+  --rule-soft: rgba(38,36,31,0.08);
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max: 1240px;
+  --dur: 0.9s;
+  --ease: cubic-bezier(.16,.8,.24,1);
+}
+
+*,*::before,*::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *,*::before,*::after{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+body{
+  margin:0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img,svg{ display:block; max-width:100%; }
+a{ color: inherit; text-decoration: none; }
+button{ font-family: inherit; background:none; border:none; cursor:pointer; color:inherit; }
+h1,h2,h3,h4,p{ margin:0; }
+ul{ margin:0; padding:0; list-style:none; }
+
+:focus-visible{
+  outline: 2px solid var(--sage-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap{ max-width: var(--max); margin:0 auto; padding: 0 32px; }
+@media (max-width: 640px){ .wrap{ padding: 0 22px; } }
+
+.eyebrow{
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+}
+
+.serif{ font-family: var(--serif); font-weight:400; }
+
+section{ position: relative; }
+
+.reveal{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.reveal.in{ opacity: 1; transform: translateY(0); }
+.reveal-delay-1{ transition-delay: 0.08s; }
+.reveal-delay-2{ transition-delay: 0.16s; }
+.reveal-delay-3{ transition-delay: 0.24s; }
+
+/* ============ NAV ============ */
+.nav{
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 500;
+  padding: 22px 0;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), padding var(--dur) var(--ease);
+}
+.nav.scrolled{
+  background: rgba(246,242,233,0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 14px 0;
+}
+.nav .wrap{ display:flex; align-items:center; justify-content: space-between; }
+.nav-mark{ font-size: 14px; font-weight: 700; letter-spacing: 0.12em; }
+.nav-links{ display:flex; align-items:center; gap: 34px; }
+.nav-links a{
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-soft);
+  position: relative;
+  padding-bottom: 3px;
+}
+.nav-links a::after{
+  content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background: var(--sage-deep);
+  transition: width 0.35s var(--ease);
+}
+.nav-links a:hover{ color: var(--ink); }
+.nav-links a:hover::after{ width:100%; }
+.nav-links a.resume{ color: var(--ink); }
+.nav-toggle{ display:none; }
+@media (max-width: 760px){
+  .nav-links{ display:none; }
+  .nav-toggle{ display:block; font-size: 12px; font-weight:600; letter-spacing:.12em; text-transform: uppercase; border: 1px solid var(--rule); padding: 7px 12px; border-radius: 2px; }
+}
+
+/* ============ HERO ============ */
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 150px 0 90px;
+  overflow: hidden;
+}
+.hero .wrap{ display:grid; grid-template-columns: 1.05fr 0.95fr; gap: 40px; align-items:center; }
+@media (max-width: 900px){ .hero .wrap{ grid-template-columns: 1fr; } .hero{ padding-top: 130px; } }
+
+.hero-eyebrow{ margin-bottom: 22px; }
+.hero h1{
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(46px, 6.6vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.hero h1 em{ font-style: italic; color: var(--sage-deep); }
+.hero-sub{
+  margin-top: 26px;
+  max-width: 480px;
+  font-size: 17px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.hero-meta{
+  margin-top: 40px;
+  display:flex; gap: 28px; flex-wrap:wrap;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint);
+}
+.hero-meta span{ display:block; }
+.hero-meta b{ display:block; color: var(--ink-soft); font-weight: 600; margin-bottom: 4px; }
+
+.hero-cta{ margin-top: 46px; display:flex; align-items:center; gap: 30px; }
+.btn-primary{
+  display:inline-flex; align-items:center; gap:10px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 15px 26px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 2px;
+  transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.btn-primary:hover{ background: var(--sage-deep); transform: translateY(-1px); }
+.btn-link{
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color .3s, border-color .3s;
+}
+.btn-link:hover{ color: var(--ink); border-color: var(--ink); }
+
+.hero-visual{ position:relative; height: 460px; }
+@media (max-width: 900px){ .hero-visual{ height: 320px; margin-top: 10px; } }
+.hero-visual svg{ width:100%; height:100%; }
+.signal-caption{
+  position:absolute; bottom: -6px; left: 0;
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint);
+}
+
+/* ============ PROOF ============ */
+.proof{ padding: 70px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); background: var(--bg-deep); }
+.proof-head{ margin-bottom: 40px; }
+.proof-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+@media (max-width: 760px){ .proof-grid{ grid-template-columns: 1fr; gap: 34px; } }
+.proof-item .num{
+  font-family: var(--serif);
+  font-size: clamp(44px,6vw,64px);
+  color: var(--sage-deep);
+  line-height:1;
+}
+.proof-item .lbl{ margin-top: 10px; font-size: 14px; color: var(--ink-soft); max-width: 220px; }
+.proof-note{ margin-top: 46px; font-size: 12px; letter-spacing: .04em; color: var(--ink-faint); }
+
+/* ============ CORE IDEA ============ */
+.core{ padding: 150px 0; }
+.core .wrap{ display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
+@media (max-width: 860px){ .core .wrap{ grid-template-columns: 1fr; gap: 30px; } }
+.core h2{
+  font-family: var(--serif); font-weight:400;
+  font-size: clamp(34px,4.6vw,56px);
+  line-height: 1.08;
+}
+.core-side{ align-self:end; }
+.core-side .lead{ font-size: 19px; font-weight: 600; margin-bottom: 18px; }
+.core-side p{ color: var(--ink-soft); font-size: 15.5px; line-height: 1.75; }
+.core-questions{ margin-top: 26px; display:flex; flex-direction:column; gap:8px; }
+.core-questions span{ font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--sage-deep); }
+
+/* ============ APPROACH (HOW I THINK) ============ */
+.approach{ padding: 130px 0; background: var(--bg-deep); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+.approach-head{ margin-bottom: 90px; }
+.approach-head h2{ font-family: var(--serif); font-size: clamp(32px,4.4vw,52px); font-weight:400; }
+.approach-head p{ margin-top: 14px; color: var(--ink-soft); font-size: 15.5px; }
+.steps{ position: relative; }
+.steps::before{
+  content:''; position:absolute; left: 46px; top: 10px; bottom: 10px; width:1px;
+  background: linear-gradient(var(--rule), var(--rule));
+}
+@media (max-width: 640px){ .steps::before{ left: 26px; } }
+.step{
+  position: relative;
+  display:grid; grid-template-columns: 92px 1fr; gap: 30px;
+  padding: 34px 0;
+  align-items: baseline;
+}
+@media (max-width: 640px){ .step{ grid-template-columns: 52px 1fr; gap: 18px; } }
+.step:not(:last-child){ border-bottom: none; }
+.step-num{
+  font-family: var(--serif);
+  font-size: 30px;
+  color: var(--ink-faint);
+  position: relative;
+  z-index: 2;
+}
+.step.in .step-num{ color: var(--sage-deep); transition: color .5s var(--ease); }
+.step-dot{
+  position:absolute; left: 42px; top: 46px; width:9px; height:9px; border-radius:50%;
+  background: var(--ink-faint); z-index: 3;
+  transition: background .5s var(--ease), transform .5s var(--ease);
+}
+@media (max-width: 640px){ .step-dot{ left: 22px; } }
+.step.in .step-dot{ background: var(--sage-deep); transform: scale(1.3); }
+.step-title{ font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+.step-desc{ margin-top: 6px; font-size: 17px; color: var(--ink-soft); max-width: 520px; }
+.approach-foot{ margin-top: 70px; font-family: var(--serif); font-style: italic; font-size: 24px; color: var(--sage-deep); }
+
+/* ============ WORK ============ */
+.work{ padding: 150px 0 60px; }
+.work-head{ margin-bottom: 100px; }
+.work-head h2{ font-family: var(--serif); font-weight:400; font-size: clamp(36px,5vw,60px); }
+.work-head p{ margin-top: 16px; color: var(--ink-soft); font-size: 16px; }
+
+.project{
+  padding: 90px 0;
+  border-top: 1px solid var(--rule);
+  display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center;
+}
+.project:last-of-type{ border-bottom: 1px solid var(--rule); }
+.project.reverse{ direction: rtl; }
+.project.reverse > *{ direction: ltr; }
+@media (max-width: 900px){
+  .project, .project.reverse{ grid-template-columns: 1fr; direction: ltr; gap: 32px; padding: 60px 0; }
+}
+.project-meta{ display:flex; align-items:center; gap: 16px; margin-bottom: 22px; }
+.project-number{ font-family: var(--serif); font-size: 15px; color: var(--ink-faint); }
+.project-cat{ font-size: 11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color: var(--sage-deep); }
+.project h3{ font-family: var(--serif); font-weight: 400; font-size: clamp(28px,3.6vw,42px); line-height: 1.12; margin-bottom: 22px; }
+.project-desc{ color: var(--ink-soft); font-size: 15.5px; line-height: 1.75; max-width: 480px; margin-bottom: 26px; }
+.project-flow{ display:flex; align-items:center; gap: 10px; flex-wrap:wrap; font-size: 11px; letter-spacing:.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 30px; }
+.project-flow strong{ color: var(--ink); font-weight: 700; }
+.project-flow .arrow{ color: var(--ink-faint); }
+.project-stats{ display:flex; gap: 34px; margin-bottom: 30px; }
+.project-stats .n{ font-family: var(--serif); font-size: 30px; color: var(--sage-deep); }
+.project-stats .l{ font-size: 12px; color: var(--ink-soft); max-width: 130px; margin-top: 4px; }
+.project-open{
+  font-size: 12px; font-weight: 700; letter-spacing:.1em; text-transform: uppercase;
+  display:inline-flex; align-items:center; gap: 8px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 3px;
+}
+.project-open:hover{ color: var(--sage-deep); border-color: var(--sage-deep); }
+.project-visual{ position:relative; }
+.project-visual .chart-wrap{ background: var(--panel); border:1px solid var(--rule); padding: 26px; border-radius: 3px; }
+.chart-caption{ margin-top: 12px; font-size: 11px; color: var(--ink-faint); letter-spacing: .04em; }
+
+/* ============ WHAT I DO ============ */
+.whatido{ padding: 140px 0; background: var(--bg-deep); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+.whatido h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(32px,4.4vw,50px); margin-bottom: 70px; max-width: 640px; line-height:1.1; }
+.wid-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--rule); border:1px solid var(--rule); }
+@media (max-width: 860px){ .wid-grid{ grid-template-columns: repeat(2,1fr); } }
+.wid-item{ background: var(--bg-deep); padding: 38px 30px; }
+.wid-item .idx{ font-size: 11px; color: var(--ink-faint); letter-spacing: .1em; margin-bottom: 20px; }
+.wid-item h4{ font-family: var(--serif); font-size: 24px; margin-bottom: 10px; color: var(--sage-deep); }
+.wid-item p{ font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+.whatido-foot{ margin-top: 56px; font-size: 15px; color: var(--ink-faint); }
+.whatido-foot b{ display:block; color: var(--ink); font-weight: 600; }
+
+/* ============ SKILLS ============ */
+.skills{ padding: 150px 0; }
+.skills-head{ margin-bottom: 70px; }
+.skills-head h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(32px,4.4vw,50px); }
+.skills-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 50px 40px; }
+@media (max-width: 760px){ .skills-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px){ .skills-grid{ grid-template-columns: 1fr; } }
+.skill-group .g-title{ font-size: 11px; font-weight: 700; letter-spacing:.14em; text-transform: uppercase; color: var(--sage-deep); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.skill-group ul li{ font-size: 15px; color: var(--ink-soft); padding: 5px 0; }
+
+/* ============ TRANSFERABLE ============ */
+.transfer{ padding: 140px 0; background: var(--ink); color: var(--bg); }
+.transfer h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(32px,5vw,58px); line-height: 1.15; max-width: 780px; }
+.transfer h2 em{ font-style: italic; color: var(--sand); }
+.transfer-chips{ margin-top: 60px; display:flex; flex-wrap: wrap; gap: 14px 10px; }
+.transfer-chips span{
+  font-size: 12px; letter-spacing:.1em; text-transform: uppercase; color: rgba(246,242,233,0.55);
+  border: 1px solid rgba(246,242,233,0.22);
+  padding: 9px 16px; border-radius: 100px;
+  transition: color .3s, border-color .3s;
+}
+.transfer-chips span:hover{ color: var(--bg); border-color: var(--sand); }
+.transfer-note{ margin-top: 40px; font-size: 13px; color: rgba(246,242,233,0.42); max-width: 520px; }
+
+/* ============ ABOUT ============ */
+.about{ padding: 150px 0; }
+.about .wrap{ display:grid; grid-template-columns: 0.78fr 1fr 0.85fr; gap: 56px; align-items: start; }
+@media (max-width: 980px){ .about .wrap{ grid-template-columns: 1fr 1fr; gap: 40px; } .about-portrait{ grid-column: 1 / -1; max-width: 340px; } }
+@media (max-width: 640px){ .about .wrap{ grid-template-columns: 1fr; gap: 36px; } .about-portrait{ max-width: 280px; } }
+
+.about-portrait{ position: relative; }
+.about-portrait figure{ margin: 0; }
+.about-portrait img{
+  width: 100%;
+  display: block;
+  filter: sepia(14%) saturate(88%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 62%, transparent 100%);
+}
+.about-portrait figcaption{
+  margin-top: 14px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.about h2{ font-family: var(--serif); font-weight:400; font-size: clamp(32px,4.4vw,50px); line-height:1.12; margin-bottom: 30px; }
+.about p{ color: var(--ink-soft); font-size: 16px; line-height: 1.8; margin-bottom: 18px; max-width: 500px; }
+.about-edu{ border-top: 1px solid var(--rule); padding-top: 26px; margin-top: 10px; }
+.about-edu .deg{ font-size: 16px; font-weight: 600; }
+.about-edu .inst{ margin-top: 6px; font-size: 14px; color: var(--ink-soft); }
+.about-edu .yrs{ margin-top: 2px; font-size: 12px; color: var(--ink-faint); letter-spacing: .04em; }
+.coursework{ margin-top: 22px; display:flex; flex-wrap:wrap; gap: 8px; }
+.coursework span{ font-size: 11.5px; letter-spacing:.04em; color: var(--ink-soft); border: 1px solid var(--rule); padding: 6px 12px; border-radius: 100px; }
+
+/* ============ EXPERIENCE ============ */
+.experience{ padding: 0 0 150px; }
+.exp-card{ border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 60px 0; }
+.exp-head{ display:flex; justify-content:space-between; align-items: baseline; flex-wrap:wrap; gap: 12px; margin-bottom: 50px; }
+.exp-head h3{ font-family: var(--serif); font-size: 30px; font-weight: 400; }
+.exp-head .meta{ font-size: 12px; letter-spacing:.08em; text-transform: uppercase; color: var(--ink-faint); }
+.exp-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 40px; }
+@media (max-width: 760px){ .exp-grid{ grid-template-columns: 1fr; } }
+.exp-item .t{ font-size: 12px; font-weight: 700; letter-spacing:.14em; text-transform: uppercase; color: var(--sage-deep); margin-bottom: 10px; }
+.exp-item p{ font-size: 15px; color: var(--ink-soft); line-height: 1.65; }
+
+/* ============ CERTS ============ */
+.certs{ padding: 0 0 150px; }
+.certs h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(28px,3.6vw,40px); margin-bottom: 40px; }
+.cert-list{ border-top: 1px solid var(--rule); }
+.cert-row{ display:flex; justify-content: space-between; align-items:center; padding: 20px 0; border-bottom: 1px solid var(--rule); gap: 16px; flex-wrap: wrap;}
+.cert-row .name{ font-size: 15.5px; font-weight: 500; }
+.cert-row .org{ font-size: 13px; color: var(--ink-faint); }
+.cert-row .status{ font-size: 11px; letter-spacing:.08em; text-transform: uppercase; color: var(--sage-deep); border: 1px solid var(--sage); padding: 4px 10px; border-radius: 100px; }
+
+/* personality line */
+.aside-line{ text-align:center; padding: 40px 0; }
+.aside-line p{ font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--ink-faint); }
+
+/* ============ CONTACT ============ */
+.contact{ padding: 150px 0 110px; background: var(--bg-deep); border-top: 1px solid var(--rule); }
+.contact h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(38px,6vw,72px); max-width: 780px; line-height: 1.06; }
+.contact-sub{ margin-top: 20px; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--sage-deep); }
+.contact-copy{ margin-top: 30px; max-width: 460px; color: var(--ink-soft); font-size: 15.5px; line-height: 1.75; }
+.contact-links{ margin-top: 56px; display:flex; flex-wrap:wrap; gap: 46px; }
+.contact-links a{ font-size: 13px; font-weight: 700; letter-spacing:.1em; text-transform: uppercase; border-bottom: 1px solid var(--rule); padding-bottom: 4px; transition: color .3s, border-color .3s; }
+.contact-links a:hover{ color: var(--sage-deep); border-color: var(--sage-deep); }
+.contact-email{ margin-top: 40px; font-family: var(--serif); font-size: clamp(22px,3vw,30px); border-bottom: 1px solid var(--rule); display:inline-block; padding-bottom: 6px; }
+.contact-email:hover{ color: var(--sage-deep); border-color: var(--sage-deep); }
+
+/* ============ FOOTER ============ */
+footer{ padding: 60px 0 40px; }
+.footer-top{ display:flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding-bottom: 30px; border-bottom: 1px solid var(--rule); }
+.footer-mark{ font-size: 14px; font-weight: 700; letter-spacing: 0.1em; }
+.footer-tag{ font-size: 13px; color: var(--ink-faint); margin-top: 6px; }
+.footer-loc{ font-size: 13px; color: var(--ink-faint); }
+.footer-bottom{ display:flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-top: 24px; font-size: 12px; color: var(--ink-faint); }
+
+/* ============ CASE STUDY OVERLAY ============ */
+.overlay{
+  position: fixed; inset: 0; z-index: 900;
+  background: var(--panel);
+  transform: translateY(100%);
+  transition: transform 0.6s var(--ease);
+  overflow-y: auto;
+}
+.overlay.open{ transform: translateY(0); }
+.overlay-inner{ max-width: 860px; margin: 0 auto; padding: 90px 32px 140px; }
+.overlay-close{
+  position: fixed; top: 26px; right: 32px; z-index: 910;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  display:flex; align-items:center; gap: 8px;
+  background: var(--panel); padding: 10px 16px; border: 1px solid var(--rule); border-radius: 100px;
+}
+.overlay-close:hover{ color: var(--sage-deep); border-color: var(--sage-deep); }
+.overlay-eyebrow{ font-size: 11px; letter-spacing:.14em; text-transform: uppercase; color: var(--sage-deep); font-weight: 700; margin-bottom: 20px; }
+.overlay-inner h2{ font-family: var(--serif); font-weight: 400; font-size: clamp(34px,5vw,56px); line-height: 1.08; margin-bottom: 60px; }
+.cs-block{ padding: 34px 0; border-top: 1px solid var(--rule); }
+.cs-block .cs-label{ font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+.cs-block p{ font-size: 16px; color: var(--ink-soft); line-height: 1.8; max-width: 620px; }
+.cs-note{ margin-top: 18px; border-left: 2px solid var(--sage); padding-left: 16px; }
+.cs-note .k{ font-size: 11px; font-weight: 700; letter-spacing:.1em; text-transform: uppercase; color: var(--sage-deep); }
+.cs-note p{ margin-top: 4px; font-size: 14.5px; }
+.cs-chart{ margin: 18px 0; background: var(--bg); border: 1px solid var(--rule); padding: 22px; border-radius: 3px; }
+
+@media (max-width: 640px){
+  .overlay-inner{ padding: 90px 22px 100px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="nav-mark">NAVNEETH</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="resume" aria-label="Resume" target="_blank">Resume <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow hero-eyebrow">Business Analysis · Integration · Data</div>
+      <h1>I connect systems and<br>clarify <em>messy data.</em></h1>
+      <p class="hero-sub">I like problems that sit between business needs and technical systems. I use SAP BTP, Python, and SQL to integrate platforms, analyze processes, and turn complex data into decisions people can act on.</p>
+      <div class="hero-meta">
+        <span><b>Based in</b>India</span>
+        <span><b>Focus</b>Business Analysis &amp; Integration</span>
+        <span><b>Tools</b>SAP BTP / CPI / SQL / Python</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary" aria-label="Explore my work">Explore my work <span aria-hidden="true">↓</span></a>
+        <a href="resume.pdf" class="btn-link" aria-label="Resume" target="_blank">Resume <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg id="signalSvg" viewBox="0 0 520 460" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+      <div class="signal-caption">Noise, organizing into signal — scroll to watch</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROOF ============ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="eyebrow proof-head reveal">A few things I've worked with</div>
+    <div class="proof-grid">
+      <div class="proof-item reveal reveal-delay-1">
+        <div class="num" data-count="25" data-suffix="%">0%</div>
+        <div class="lbl">Improvement in data reliability</div>
+      </div>
+      <div class="proof-item reveal reveal-delay-2">
+        <div class="num" data-count="15" data-suffix=" hrs/week">0</div>
+        <div class="lbl">Manual reporting time reduced</div>
+      </div>
+      <div class="proof-item reveal reveal-delay-3">
+        <div class="num" data-count="500" data-suffix="K+">0</div>
+        <div class="lbl">Records analyzed</div>
+      </div>
+    </div>
+    <p class="proof-note reveal">Selected outcomes from recent analytical projects.</p>
+  </div>
+</section>
+
+<!-- ============ CORE IDEA ============ -->
+<section class="core">
+  <div class="wrap">
+    <h2 class="reveal">The interesting part<br>isn't the dashboard.</h2>
+    <div class="core-side reveal reveal-delay-1">
+      <div class="lead">It's the question behind it.</div>
+      <p>I approach integration and analytics as a business problem-solving process rather than just a technical exercise.</p>
+      <div class="core-questions">
+        <span>What business process needs improving?</span>
+        <span>How do the systems need to communicate?</span>
+        <span>What data can we trust?</span>
+        <span>What changes if we act on it?</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="approach-head reveal">
+      <h2>How I think</h2>
+      <p>Tools change. The process doesn't.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal-step">
+        <div class="step-num">01</div>
+        <div><div class="step-dot"></div><div class="step-title">Question</div><div class="step-desc">What business problem are we actually trying to solve?</div></div>
+      </div>
+      <div class="step reveal-step">
+        <div class="step-num">02</div>
+        <div><div class="step-dot"></div><div class="step-title">Map</div><div class="step-desc">What systems, APIs, and data flows are involved?</div></div>
+      </div>
+      <div class="step reveal-step">
+        <div class="step-num">03</div>
+        <div><div class="step-dot"></div><div class="step-title">Integrate</div><div class="step-desc">How do we connect platforms (like SAP BTP) reliably and securely?</div></div>
+      </div>
+      <div class="step reveal-step">
+        <div class="step-num">04</div>
+        <div><div class="step-dot"></div><div class="step-title">Analyze</div><div class="step-desc">What is the data telling us about the process?</div></div>
+      </div>
+      <div class="step reveal-step">
+        <div class="step-num">05</div>
+        <div><div class="step-dot"></div><div class="step-title">Decide</div><div class="step-desc">What technical solution best serves the overarching business goal?</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="work-head reveal">
+      <h2>Selected investigations</h2>
+      <p>Different datasets. Different problems. The same curiosity.</p>
+    </div>
+
+    <!-- PROJECT 01 -->
+    <div class="project reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <span class="project-cat">Process Integration / Data Quality</span>
+        </div>
+        <h3>Can we trust the data before we integrate the systems?</h3>
+        <p class="project-desc">Led requirements gathering and built automated data validation checks using Python and SQL to ensure clean data migration and reliable system integrations.</p>
+        <div class="project-flow">
+          <strong>Source Systems</strong><span class="arrow">→</span>
+          <span>Requirements</span><span>·</span><span>Validation</span><span>·</span><span>Integration</span>
+          <span class="arrow">→</span><strong>Reliable Data Flow</strong>
+        </div>
+        <div class="project-stats">
+          <div><div class="n">25%</div><div class="l">data reliability improvement</div></div>
+          <div><div class="n">15 hrs</div><div class="l">reporting time saved per week</div></div>
+        </div>
+        <button class="project-open" data-cs="cs1" aria-label="Read investigation: Can we trust the data before we trust the dashboard?">Read the investigation <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="project-visual">
+        <div class="chart-wrap">
+          <svg viewBox="0 0 460 220" width="100%" aria-hidden="true">
+            <line x1="0" y1="20" x2="460" y2="20" stroke="var(--rule)" stroke-width="1"/>
+            <line x1="0" y1="80" x2="460" y2="80" stroke="var(--rule)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="460" y2="140" stroke="var(--rule)" stroke-width="1"/>
+            <line x1="0" y1="200" x2="460" y2="200" stroke="var(--rule)" stroke-width="1"/>
+            <polyline points="0,160 60,150 120,120 180,100 240,60 300,70 360,40 420,50 460,30" fill="none" stroke="#B7B0A0" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <polyline points="0,170 60,165 120,150 180,145 240,110 300,120 360,95 420,100 460,88" fill="none" stroke="var(--sage-deep)" stroke-width="2"/>
+            <circle cx="240" cy="60" r="4" fill="var(--sand)"/>
+            <text x="248" y="55" font-family="Inter" font-size="10" fill="#B7856F" letter-spacing="0.5">DATA QUALITY ISSUE</text>
+            <text x="0" y="212" font-family="Inter" font-size="10" fill="#9A927F">Raw volume</text>
+            <text x="360" y="212" font-family="Inter" font-size="10" fill="#9A927F">Reconciled</text>
+          </svg>
+        </div>
+        <div class="chart-caption">Conceptual illustration — raw vs. reconciled trade volume, with duplicate spikes flagged before reporting.</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 02 -->
+    <div class="project reverse reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">02</span>
+          <span class="project-cat">Business Analysis / System Integration</span>
+        </div>
+        <h3>How do we streamline operations across platforms?</h3>
+        <p class="project-desc">Mapped business processes and transformed 500K+ records to identify bottlenecks, supporting the design of a unified SAP BTP integration architecture.</p>
+        <div class="project-flow">
+          <strong>Business Process</strong><span class="arrow">→</span>
+          <span>Process Mapping</span><span>·</span><span>SAP CPI</span><span>·</span><span>Analysis</span>
+          <span class="arrow">→</span><strong>Optimized Workflow</strong>
+        </div>
+        <div class="project-stats">
+          <div><div class="n">500K+</div><div class="l">records extracted &amp; transformed</div></div>
+        </div>
+        <button class="project-open" data-cs="cs2" aria-label="Read investigation: What makes one route worth expanding?">Read the investigation <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="project-visual">
+        <div class="chart-wrap">
+          <svg viewBox="0 0 460 220" width="100%" aria-hidden="true">
+            <g stroke="var(--rule)" stroke-width="1">
+              <line x1="40" y1="30" x2="420" y2="30"/><line x1="40" y1="80" x2="420" y2="80"/>
+              <line x1="40" y1="130" x2="420" y2="130"/><line x1="40" y1="180" x2="420" y2="180"/>
+            </g>
+            <circle cx="90" cy="150" r="24" fill="none" stroke="var(--sage)" stroke-width="1.4"/>
+            <circle cx="200" cy="90" r="34" fill="none" stroke="var(--sage-deep)" stroke-width="1.6"/>
+            <circle cx="330" cy="60" r="16" fill="none" stroke="var(--sand)" stroke-width="1.4"/>
+            <circle cx="270" cy="160" r="12" fill="none" stroke="#B7B0A0" stroke-width="1.2"/>
+            <line x1="90" y1="150" x2="200" y2="90" stroke="var(--ink-faint)" stroke-width="0.8"/>
+            <line x1="200" y1="90" x2="330" y2="60" stroke="var(--ink-faint)" stroke-width="0.8"/>
+            <line x1="200" y1="90" x2="270" y2="160" stroke="var(--ink-faint)" stroke-width="0.8"/>
+            <text x="204" y="45" font-family="Inter" font-size="10" fill="#4C5A3B" letter-spacing="0.5">KEY DRIVER</text>
+          </svg>
+        </div>
+        <div class="chart-caption">Conceptual illustration — node size representing relative route contribution to network performance.</div>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 -->
+    <div class="project reveal">
+      <div>
+        <div class="project-meta">
+          <span class="project-number">03</span>
+          <span class="project-cat">Statistics / Strategy</span>
+        </div>
+        <h3>Where should the next store go?</h3>
+        <p class="project-desc">Evaluated demographic and competitor datasets with feature engineering and multiple regression modelling to support data-backed site-selection decisions.</p>
+        <div class="project-flow">
+          <strong>Demographic + competitor data</strong><span class="arrow">→</span>
+          <span>SQL</span><span>·</span><span>Feature Engineering</span><span>·</span><span>Regression</span>
+          <span class="arrow">→</span><strong>Site score</strong>
+        </div>
+        <p class="project-desc" style="margin-top:-6px; font-style:italic; font-family:var(--serif); font-size:18px; color: var(--sage-deep);">Turn a location question into a measurable decision.</p>
+        <button class="project-open" data-cs="cs3" aria-label="Read investigation: Where should the next store go?">Read the investigation <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="project-visual">
+        <div class="chart-wrap">
+          <svg viewBox="0 0 460 220" width="100%" aria-hidden="true">
+            <g id="scatterPts"></g>
+            <line id="regLine" x1="20" y1="190" x2="440" y2="40" stroke="var(--sage-deep)" stroke-width="1.6"/>
+            <text x="330" y="55" font-family="Inter" font-size="10" fill="#4C5A3B" letter-spacing="0.5">TREND</text>
+          </svg>
+        </div>
+        <div class="chart-caption">Conceptual illustration — foot traffic potential vs. modelled site score across candidate locations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT I DO ============ -->
+<section class="whatido">
+  <div class="wrap">
+    <h2 class="reveal">From raw tables<br>to useful answers.</h2>
+    <div class="wid-grid">
+      <div class="wid-item reveal"><div class="idx">01</div><h4>Understand</h4><p>Break down ambiguous problems.</p></div>
+      <div class="wid-item reveal reveal-delay-1"><div class="idx">02</div><h4>Query</h4><p>Use SQL to interrogate data.</p></div>
+      <div class="wid-item reveal reveal-delay-2"><div class="idx">03</div><h4>Model</h4><p>Use Python and statistics to investigate relationships.</p></div>
+      <div class="wid-item reveal reveal-delay-3"><div class="idx">04</div><h4>Communicate</h4><p>Turn analysis into clear visual stories.</p></div>
+    </div>
+    <div class="whatido-foot reveal"><b>The tools are secondary.</b>The reasoning is the work.</div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills">
+  <div class="wrap">
+    <div class="skills-head reveal">
+      <h2>A researcher's toolkit</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal"><div class="g-title">Business Analysis</div><ul><li>Requirements Gathering</li><li>Process Mapping (BPMN)</li><li>Stakeholder Management</li><li>Agile / Scrum</li><li>System Design</li></ul></div>
+      <div class="skill-group reveal"><div class="g-title">Integrate</div><ul><li>SAP BTP</li><li>SAP CPI (Cloud Platform Integration)</li><li>API Management</li><li>OData / REST / SOAP</li><li>Groovy Scripting</li></ul></div>
+      <div class="skill-group reveal"><div class="g-title">Query</div><ul><li>SQL</li><li>Joins</li><li>Window Functions</li><li>Subqueries</li></ul></div>
+      <div class="skill-group reveal"><div class="g-title">Analyze &amp; Model</div><ul><li>Python (Pandas, NumPy)</li><li>EDA</li><li>Hypothesis Testing</li><li>Regression</li></ul></div>
+      <div class="skill-group reveal"><div class="g-title">Communicate</div><ul><li>Power BI</li><li>DAX</li><li>Excel</li><li>Data Storytelling</li></ul></div>
+      <div class="skill-group reveal"><div class="g-title">Data Quality</div><ul><li>Validation</li><li>Reconciliation</li><li>ETL</li><li>Data Wrangling</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRANSFERABLE ============ -->
+<section class="transfer">
+  <div class="wrap">
+    <h2 class="reveal">The dataset can change.<br>The <em>problem-solving process</em> doesn't.</h2>
+    <div class="transfer-chips reveal reveal-delay-1">
+      <span>Product</span><span>Growth</span><span>Operations</span><span>Marketing</span>
+      <span>Finance</span><span>Customer</span><span>Strategy</span><span>Risk</span>
+    </div>
+    <p class="transfer-note reveal reveal-delay-2">Not a claim of professional experience across every domain — a reflection of how the underlying analytical approach transfers between them.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-portrait reveal">
+      <figure>
+        <img src="portrait.jpg" alt="Navneeth Patnaik Portrait" alt="Navneeth Patnaik, wearing a cap, glasses and headphones, looking down and to the side" />
+        <figcaption>Navneeth Patnaik</figcaption>
+      </figure>
+    </div>
+    <div class="reveal">
+      <h2>Curious about how<br>things work.</h2>
+      <p>I'm a Computer Science undergraduate at GITAM University with a strong interest in understanding problems through data.</p>
+      <p>My work has taken me across different datasets and domains, from financial trade data to airline networks and retail expansion.</p>
+      <p>What interests me is the common thread: finding the useful signal, testing whether it's real, and explaining what it means.</p>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="about-edu">
+        <div class="deg">B.Tech in Computer Science Engineering</div>
+        <div class="inst">GITAM University</div>
+        <div class="yrs">2023 — 2027</div>
+      </div>
+      <div class="coursework">
+        <span>Data Structures</span>
+        <span>Database Management Systems</span>
+        <span>Statistics</span>
+        <span>Operations Research</span>
+        <span>Big Data Analytics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience">
+  <div class="wrap">
+    <div class="exp-card reveal">
+      <div class="exp-head">
+        <h3>Freelance Consultant</h3>
+        <div class="meta">Remote · 2022 — 2025</div>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-item"><div class="t">Translate</div><p>Turned client requirements into clear technical specifications.</p></div>
+        <div class="exp-item"><div class="t">Align</div><p>Managed expectations, timelines and scope across multiple projects.</p></div>
+        <div class="exp-item"><div class="t">Automate</div><p>Used Python to automate recurring reporting and improve turnaround and accuracy.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="certs">
+  <div class="wrap">
+    <h2 class="reveal">Certifications</h2>
+    <div class="cert-list reveal">
+      <div class="cert-row">
+        <div><div class="name">Google Data Analytics Professional Certificate</div><div class="org">Google / Coursera</div></div>
+      </div>
+      <div class="cert-row">
+        <div><div class="name">Microsoft Azure Fundamentals — AZ-900</div><div class="org">Microsoft</div></div>
+      </div>
+      <div class="cert-row">
+        <div><div class="name">Microsoft Azure Administrator — AZ-104</div><div class="org">Microsoft</div></div>
+        <div class="status">In progress</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="aside-line reveal">
+  <p>Somewhere between curiosity and a suspicious amount of SQL.</p>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Have a messy question?</h2>
+    <div class="contact-sub reveal reveal-delay-1">That's usually where the interesting work starts.</div>
+    <p class="contact-copy reveal reveal-delay-1">I'm interested in opportunities where data can help make a product, process or decision better.</p>
+    <a class="contact-email reveal reveal-delay-2" href="mailto:navneethptnk123@gmail.com">navneethptnk123@gmail.com</a>
+    <div class="contact-links reveal reveal-delay-2">
+      <a href="#" aria-label="LinkedIn profile" onclick="return false;">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a href="#" aria-label="GitHub profile" onclick="return false;">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="resume.pdf" aria-label="Resume" target="_blank">Resume <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-mark">NAVNEETH PATNAIK</div>
+        <div class="footer-tag">Data · Questions · Decisions</div>
+      </div>
+      <div class="footer-loc">India</div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026</span>
+      <span>Still looking for the signal.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CASE STUDY OVERLAYS ============ -->
+<div class="overlay" id="cs1" role="dialog" aria-modal="true" aria-label="Case study: Financial Trade Analytics">
+  <button class="overlay-close" data-close aria-label="Close case study">Close <span aria-hidden="true">✕</span></button>
+  <div class="overlay-inner">
+    <div class="overlay-eyebrow">Investigation 01 — Data Quality / Reporting</div>
+    <h2>Can we trust the data before we trust the dashboard?</h2>
+
+    <div class="cs-block"><div class="cs-label">Context</div><p>A trading desk relied on daily reports built from a live trade feed. Reports were being trusted at face value, without a clear picture of the feed's underlying quality.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Question</div><p>Before improving the dashboard, could the numbers behind it actually be trusted?</p></div>
+
+    <div class="cs-block"><div class="cs-label">Data</div><p>Raw trade records including timestamps, instrument identifiers, volumes and counterparties, pulled directly from the source feed with no prior cleaning applied.</p></div>
+
+    <div class="cs-block">
+      <div class="cs-label">Validation</div>
+      <p>Ran systematic checks across the feed to separate genuine activity from noise introduced by the pipeline itself.</p>
+      <div class="cs-note"><div class="k">Observation</div><p>Trade volume increased, but the reporting dataset contained duplicate records.</p></div>
+      <div class="cs-note"><div class="k">Why it mattered</div><p>Raw volume would have overstated activity, distorting any decision made from the report.</p></div>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-label">Analysis</div>
+      <p>Used Python and SQL to profile missingness and duplication rates, reconcile records against source counts, and isolate the specific pipeline stage introducing the errors.</p>
+      <div class="cs-chart">
+        <svg viewBox="0 0 460 180" width="100%" aria-hidden="true">
+          <line x1="0" y1="20" x2="460" y2="20" stroke="var(--rule)"/>
+          <line x1="0" y1="90" x2="460" y2="90" stroke="var(--rule)"/>
+          <line x1="0" y1="160" x2="460" y2="160" stroke="var(--rule)"/>
+          <polyline points="0,140 80,135 160,60 240,90 320,50 400,45 460,40" fill="none" stroke="#B7B0A0" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <polyline points="0,150 80,148 160,120 240,118 320,95 400,92 460,88" fill="none" stroke="var(--sage-deep)" stroke-width="2"/>
+          <circle cx="160" cy="60" r="4" fill="var(--sand)"/>
+          <text x="168" y="55" font-family="Inter" font-size="10" fill="#B7856F">OUTLIER — duplicate spike</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-label">Findings</div>
+      <p>Roughly a quarter of the reported volume swing on high-activity days traced back to duplicate entries rather than genuine trading, concentrated around a specific ingestion window.</p>
+    </div>
+
+    <div class="cs-block">
+      <div class="cs-label">Decision</div>
+      <p>Built automated checks for missing and duplicate records ahead of reporting, improving data reliability by 25% and cutting roughly 15 hours per week of manual reconciliation work.</p>
+      <div class="cs-note"><div class="k">Action</div><p>Added automated duplicate validation before reporting, with the Power BI dashboard rebuilt on top of the validated dataset as the final communication layer.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="cs2" role="dialog" aria-modal="true" aria-label="Case study: Airline Network Profitability">
+  <button class="overlay-close" data-close aria-label="Close case study">Close <span aria-hidden="true">✕</span></button>
+  <div class="overlay-inner">
+    <div class="overlay-eyebrow">Investigation 02 — Business Analytics / Forecasting</div>
+    <h2>What makes one route worth expanding?</h2>
+
+    <div class="cs-block"><div class="cs-label">Context</div><p>An airline network spanning many routes needed a clearer, data-backed view of where performance was strongest and where expansion made sense.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Question</div><p>Which factors actually separated a high-performing route from an underperforming one?</p></div>
+
+    <div class="cs-block"><div class="cs-label">Data</div><p>500K+ records spanning route-level operational and performance data, extracted and consolidated from multiple source tables.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Validation</div><p>Checked for inconsistent route naming, seasonal gaps and outlier records before drawing any conclusions about performance.</p></div>
+
+    <div class="cs-block">
+      <div class="cs-label">Analysis</div>
+      <p>Cleaned and transformed the dataset with Python and Pandas, used SQL to aggregate performance by route and period, then applied forecasting to project how performance drivers might hold going forward.</p>
+      <div class="cs-chart">
+        <svg viewBox="0 0 460 180" width="100%" aria-hidden="true">
+          <g stroke="var(--rule)"><line x1="0" y1="20" x2="460" y2="20"/><line x1="0" y1="90" x2="460" y2="90"/><line x1="0" y1="160" x2="460" y2="160"/></g>
+          <polyline points="0,140 60,120 120,110 180,80 240,70 300,50 360,55 420,35 460,30" fill="none" stroke="var(--sage-deep)" stroke-width="2"/>
+          <polyline points="240,70 300,50 360,55 420,35 460,30" fill="none" stroke="var(--sand)" stroke-width="2" stroke-dasharray="4 4"/>
+          <text x="242" y="60" font-family="Inter" font-size="10" fill="#B7A15B">FORECAST</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="cs-block"><div class="cs-label">Findings</div><p>A small set of routes consistently accounted for a disproportionate share of network performance, with load factor and turnaround time emerging as the clearest recurring drivers.</p></div>
+
+    <div class="cs-block">
+      <div class="cs-label">Decision</div>
+      <p>Findings were packaged into a Power BI view highlighting the strongest expansion candidates, giving stakeholders a defensible starting point for route-planning discussions.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="cs3" role="dialog" aria-modal="true" aria-label="Case study: Retail Store Expansion Strategy">
+  <button class="overlay-close" data-close aria-label="Close case study">Close <span aria-hidden="true">✕</span></button>
+  <div class="overlay-inner">
+    <div class="overlay-eyebrow">Investigation 03 — Statistics / Strategy</div>
+    <h2>Where should the next store go?</h2>
+
+    <div class="cs-block"><div class="cs-label">Context</div><p>A retail expansion decision needed to move beyond intuition toward a measurable, comparable score across candidate locations.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Question</div><p>Which combination of local factors best predicted whether a location would perform well?</p></div>
+
+    <div class="cs-block"><div class="cs-label">Data</div><p>Demographic datasets and competitor location data for each candidate site, joined and prepared using SQL.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Validation</div><p>Checked for correlated features and inconsistent geographic granularity before modelling, so the regression wasn't misled by redundant variables.</p></div>
+
+    <div class="cs-block">
+      <div class="cs-label">Analysis</div>
+      <p>Engineered features describing demographics, competition and accessibility, then applied multiple regression modelling to relate those features to expected site performance.</p>
+      <div class="cs-chart">
+        <svg viewBox="0 0 460 180" width="100%" aria-hidden="true">
+          <g id="scatterPts2"></g>
+          <line x1="10" y1="150" x2="440" y2="30" stroke="var(--sage-deep)" stroke-width="1.6"/>
+          <text x="330" y="45" font-family="Inter" font-size="10" fill="#4C5A3B">TREND</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="cs-block"><div class="cs-label">Findings</div><p>Demographic density and distance from the nearest competitor together explained the majority of variation in modelled site performance, more than any single factor alone.</p></div>
+
+    <div class="cs-block"><div class="cs-label">Decision</div><p>Converted the regression output into a simple comparable score per candidate site, turning a subjective location debate into a measurable, data-backed decision.</p></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* NAV scroll state */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+  document.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+  /* Reveal on scroll */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* Step reveal (approach) */
+  var steps = document.querySelectorAll('.step');
+  if('IntersectionObserver' in window){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); } });
+    }, { threshold: 0.4 });
+    steps.forEach(function(el){ io2.observe(el); });
+  } else { steps.forEach(function(el){ el.classList.add('in'); }); }
+
+  /* Count-up numbers */
+  var counters = document.querySelectorAll('[data-count]');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduceMotion){ el.textContent = target + suffix; return; }
+    var start = 0, dur = 1200, startTime = null;
+    function step(ts){
+      if(!startTime) startTime = ts;
+      var p = Math.min((ts - startTime) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * target) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io3 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ animateCount(e.target); io3.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    counters.forEach(function(el){ io3.observe(el); });
+  } else { counters.forEach(animateCount); }
+
+  /* ===== HERO SIGNAL VISUAL: noise -> pattern on scroll ===== */
+  var svg = document.getElementById('signalSvg');
+  var W = 520, H = 460, N = 160;
+  var pts = [];
+  var svgns = 'http://www.w3.org/2000/svg';
+
+  function seededRandom(seed){
+    var s = seed;
+    return function(){ s = (s * 9301 + 49297) % 233280; return s / 233280; };
+  }
+  var rnd = seededRandom(42);
+
+  for(var i=0;i<N;i++){
+    var start = { x: rnd()*W, y: rnd()*H };
+    // target: gentle upward-trending wave, representing a discovered signal
+    var t = i / (N-1);
+    var targetX = t * W;
+    var targetY = H*0.72 - t*H*0.42 + Math.sin(t*Math.PI*3) * 14;
+    pts.push({ start: start, target: {x: targetX, y: targetY}, r: 1.6 + rnd()*1.8, o: 0.35 + rnd()*0.4 });
+    var c = document.createElementNS(svgns,'circle');
+    c.setAttribute('cx', start.x); c.setAttribute('cy', start.y);
+    c.setAttribute('r', pts[i].r);
+    c.setAttribute('fill', i % 9 === 0 ? '#C89A5B' : '#6C7A56');
+    c.setAttribute('opacity', pts[i].o);
+    svg.appendChild(c);
+  }
+  var circles = svg.querySelectorAll('circle');
+
+  function updateSignal(){
+    var heroEl = document.querySelector('.hero');
+    var rect = heroEl.getBoundingClientRect();
+    var vh = window.innerHeight;
+    var progress = 1 - Math.max(0, Math.min(1, rect.top / (vh*0.6) ));
+    progress = Math.max(0, Math.min(1, progress));
+    if(reduceMotion) progress = 1;
+    circles.forEach(function(c, idx){
+      var p = pts[idx];
+      var x = p.start.x + (p.target.x - p.start.x) * progress;
+      var y = p.start.y + (p.target.y - p.start.y) * progress;
+      c.setAttribute('cx', x); c.setAttribute('cy', y);
+      c.setAttribute('opacity', p.o + progress*0.25);
+    });
+  }
+  var ticking = false;
+  function requestTick(){ if(!ticking){ requestAnimationFrame(function(){ updateSignal(); ticking = false; }); ticking = true; } }
+  document.addEventListener('scroll', requestTick, { passive:true });
+  window.addEventListener('resize', requestTick);
+  updateSignal();
+
+  /* Scatter chart points (project 03 + case study) */
+  function buildScatter(id, n, seed){
+    var g = document.getElementById(id);
+    if(!g) return;
+    var r = seededRandom(seed);
+    for(var i=0;i<n;i++){
+      var x = 20 + r()*420;
+      var trendY = 190 - ((x-20)/420)*150;
+      var y = trendY + (r()-0.5)*60;
+      y = Math.max(15, Math.min(200, y));
+      var dot = document.createElementNS(svgns,'circle');
+      dot.setAttribute('cx', x); dot.setAttribute('cy', y);
+      dot.setAttribute('r', 3);
+      dot.setAttribute('fill', '#26241F');
+      dot.setAttribute('opacity', '0.32');
+      g.appendChild(dot);
+    }
+  }
+  buildScatter('scatterPts', 42, 7);
+  buildScatter('scatterPts2', 42, 11);
+
+  /* Case study overlays */
+  var openers = document.querySelectorAll('[data-cs]');
+  var closers = document.querySelectorAll('[data-close]');
+  var activeOverlay = null;
+  openers.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-cs'));
+      if(target){ target.classList.add('open'); document.body.style.overflow = 'hidden'; activeOverlay = target; }
+    });
+  });
+  closers.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      if(activeOverlay){ activeOverlay.classList.remove('open'); document.body.style.overflow = ''; activeOverlay = null; }
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && activeOverlay){ activeOverlay.classList.remove('open'); document.body.style.overflow=''; activeOverlay = null; }
+  });
+})();
+</script>
+</body>
+</html>
